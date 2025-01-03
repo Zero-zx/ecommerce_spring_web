@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Shop</title>
+  <!-- Add Bootstrap CSS Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional: Add your custom CSS -->
+  <style>
+    .welcome-section {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .feature-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .feature-card-body {
+        padding: 15px;
+    }
+
+    .feature-card-body h5 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .feature-card-body p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .btn-custom {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+
+    .btn-custom:hover {
+        background-color: #0056b3;
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <!-- Navbar code (same as provided) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">HieuDT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cart">Cart</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+  <h2 class="display-4">Welcome to Our Shopping Website!</h2>
+  <p class="lead">Browse our wide range of products, enjoy great deals, and make your shopping experience unforgettable.</p>
+  <a href="/products" class="btn btn-custom mt-3">Browse Products</a>
+</section>
+
+<!-- Featured Products Section -->
+<section class="container mt-5">
+  <h3 class="text-center mb-4">Featured Products</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="feature-card">
+        <img src="/images/book.jpg" alt="Java Programming 2nd edition" style="width: 100%; height: 200px; object-fit: contain;">
+        <div class="feature-card-body">
+          <h5 class="card-title">Java Programming 2nd edition</h5>
+          <p class="card-text">A book of how to deal with java programming, with real usecase and samples.</p>
+          <a href="/products" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card">
+        <img src="images/laptop.jpg" alt="Product 2" style="width: 100%; height: 200px; object-fit: contain;">
+        <div class="feature-card-body">
+          <h5 class="card-title">Acer Nitro 5 AN14AG-25</h5>
+          <p class="card-text">Superior gaming laptop for gamer, ultra-high performance.</p>
+          <a href="/products" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card">
+        <img src="images/shirt.jpg" alt="Product 3" style="width: 100%; height: 200px; object-fit: contain;">
+        <div class="feature-card-body">
+          <h5 class="card-title">Blue T-shirt</h5>
+          <p class="card-text">Shirt of Steven in minecraft. Let your imaginary flies unlimitedly.</p>
+          <a href="/products" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
